@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  transition: 0.1s all;
+}
+.custom-bold-span span {
+  font-weight: bold;
+}
+
+:root {
+  --primary-color: #ff0000;
+}
+
