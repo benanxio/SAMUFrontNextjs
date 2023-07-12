@@ -9,4 +9,5 @@ export interface UserProfile {
   errors?: any;
   get_short_name?: string;
   networkError?: boolean;
+  photo_url?: string;
 }

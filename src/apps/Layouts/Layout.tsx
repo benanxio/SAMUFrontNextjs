@@ -61,20 +61,7 @@ const Layout = ({ children, ...props }: any) => {
                       <Ripple />
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      href="/search"
-                      className={` ${
-                        pathname === "/search" && styleSelected
-                      } p-ripple flex flex-row lg:flex-column align-items-center cursor-pointer p-3 lg:justify-content-center text-600 border-left-2 border-transparent hover:border-300 transition-duration-150 transition-colors`}
-                    >
-                      <i className="pi pi-search mr-2 lg:mr-0 mb-0 lg:mb-2 text-base lg:text-2xl"></i>
-                      <span className="font-medium inline text-base lg:text-xs lg:block">
-                        Search
-                      </span>
-                      <Ripple />
-                    </Link>
-                  </li>
+
                   <li>
                     <Link
                       href="/upload"

@@ -10,18 +10,8 @@ export const getUser = async (dispatch: Dispatch<any>) => {
   );
   const { errors, isSuccess, data, networkError } = await getUserFetch();
   if (isSuccess) {
-    dispatch(
-      getUserReducer({
-        isLoading: false,
-        email: data.email,
-        nickname: data.nickname,
-        first_name: data.first_name,
-        last_name: data.last_name,
-        date_joined: data.date_joined,
-        get_short_name: data.get_short_name,
-      })
-    );
-    
+    dispatch(getUserReducer(data));
+
     return true;
   } else {
     dispatch(
