@@ -7,9 +7,17 @@ const OptionsUpload = () => {
   const [ingredient, setIngredient] = useState("");
   const { setDelimiter, setEncoding, delimiter, encode } = useUpload();
   return (
-    <div className="flex mt-2">
+    <div className="flex mt-2 w-full">
       <Accordion className="w-full">
-        <AccordionTab header="Opciones " className="w-full">
+        <AccordionTab header={
+          <div className="w-full flex flex-col">
+            <h1>{"Opciones"}</h1>
+            <ul className="pt-2">
+              <li className="font-normal italic text-sm">{`Delimitador ( ${delimiter} )`}</li>
+              <li className="font-normal italic text-sm">{`Codificación ( ${encode} )`}</li>
+            </ul>
+          </div>
+        } className="w-full">
           <p className="mt-2 mb-2 font-bold">Codificacion</p>
           <div className="flex flex-wrap gap-3 w-full">
             <div className="flex align-items-center">

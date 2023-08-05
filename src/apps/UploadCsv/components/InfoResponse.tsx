@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { useSelector } from "react-redux";
 
 const InfoResponse = () => {
-  const { visibleWithoutModal, setVisibleWithoutModal } = useContext(UIContext);
+  const { visibleModalEdit, setVisibleModalEdit } = useContext(UIContext);
   const { infoSuccess, errors, modelSelected } = useSelector(
     (state: RootState) => state.Upload
   );
@@ -43,14 +43,13 @@ const InfoResponse = () => {
     <div>
       <WithoutModalDemo
         title={<p>{headerTitle?.replace(/_/g, " ")}</p>}
-        setOpen={setVisibleWithoutModal}
-        isOpen={visibleWithoutModal === modelSelected}
+        setOpen={setVisibleModalEdit}
+        isOpen={visibleModalEdit === modelSelected}
         maximizable
       >
         <div
-          className={`${
-            !infoSuccess?.success_type && "hidden"
-          } custom-bold-span`}
+          className={`${!infoSuccess?.success_type && "hidden"
+            } custom-bold-span`}
         >
           <p>
             <span> Mensage: </span> {infoSuccess?.message}
